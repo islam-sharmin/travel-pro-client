@@ -3,6 +3,8 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 import { FaGoogle } from 'react-icons/fa';
 import { FiGithub } from 'react-icons/fi';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
 
@@ -21,6 +23,7 @@ const Login = () => {
         logIn(email, password)
             .then(result => {
                 console.log(result.user);
+                toast.success('user logged in successfully');
 
                 // navigate after login
                 setTimeout(() => {
@@ -30,6 +33,7 @@ const Login = () => {
             })
             .catch(error => {
                 console.error(error);
+                toast.error('Invalid email or password');
             })
     }
 
@@ -37,6 +41,7 @@ const Login = () => {
         logInWithGoogle()
             .then(result => {
                 console.log(result.user);
+                toast.success('Google logged successfully');
 
                 // navigate after login
                 setTimeout(() => {
@@ -45,6 +50,7 @@ const Login = () => {
             })
             .catch(error => {
                 console.error(error);
+                toast.error('Login failed, please try again');
             })
     }
 
@@ -52,6 +58,7 @@ const Login = () => {
         logInWithGitHub()
             .then(result => {
                 console.log(result.user);
+                toast.success('GitHub logged successfully');
 
                 // navigate after login
                 setTimeout(() => {
@@ -60,6 +67,7 @@ const Login = () => {
             })
             .catch(error => {
                 console.error(error);
+                toast.error('Login failed, please try again');
             })
     }
 
@@ -97,6 +105,7 @@ const Login = () => {
                 </div>
             </form>
             <p className="text-center mb-4">Do not have an account. Please <Link className="text-purple-700 font-bold" to="/register">Register</Link></p>
+            <ToastContainer />
         </div>
     );
 };
