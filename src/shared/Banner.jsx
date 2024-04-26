@@ -1,0 +1,61 @@
+import { A11y, Autoplay, Navigation, Pagination, Scrollbar } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/swiper-bundle.css';
+import torism1 from "../assets/torism1.jpg"
+import torism2 from "../assets/torism2.jpg"
+import torism3 from "../assets/torism3.jpg"
+import torism4 from "../assets/torism4.jpg"
+
+
+const Banner = () => {
+    return (
+        <div>
+            <div className='rounded-lg shadow-2xl z-10'>
+            <Swiper
+                modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+                spaceBetween={50}
+                slidesPerView={1}
+                navigation
+                pagination={{ clickable: true }}
+                scrollbar={{ draggable: true }}
+                autoplay={{ delay: 3000 }} 
+            >
+                <SwiperSlide>
+                    <div className="relative w-full h-[40vh] md:h-[80vh] rounded-lg bg-no-repeat bg-cover" style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${torism1})`}}>
+                        <div className="absolute inset-0 bg-cover bg-center flex flex-col justify-center items-center">
+                            <h1 className="text-white text-3xl font-bold mb-4">Discover Your Next Adventure</h1>
+                            <p className="text-white text-lg text-center">Unlock new experiences with our dynamic tourism website!</p>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="w-full h-[40vh] md:h-[80vh] rounded-lg bg-no-repeat bg-cover" style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${torism2})`}}>
+                        <div className="absolute inset-0 bg-cover bg-center flex flex-col justify-center items-center">
+                            <h1 className="text-white text-3xl font-bold mb-4">Discover Your Next Adventure</h1>
+                            <p className="text-white text-lg text-center">Unlock new experiences with our dynamic tourism website!</p>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="relative w-full h-[40vh] md:h-[80vh] rounded-lg bg-no-repeat bg-cover" style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${torism3})`}}>
+                        <div className="absolute inset-0 bg-cover bg-center flex flex-col justify-center items-center">
+                            <h1 className="text-white text-3xl font-bold mb-4">Discover Your Next Adventure</h1>
+                            <p className="text-white text-lg text-center">Unlock new experiences with our dynamic tourism website!</p>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="relative w-full h-[40vh] md:h-[80vh] rounded-lg bg-no-repeat bg-cover" style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${torism4})`}}>
+                        <div className="absolute inset-0 bg-cover bg-center flex flex-col justify-center items-center">
+                            <h1 className="text-white text-3xl font-bold mb-4">Discover Your Next Adventure</h1>
+                            <p className="text-white text-lg text-center">Unlock new experiences with our dynamic tourism website!</p>
+                        </div>
+                    </div>
+                </SwiperSlide>
+            </Swiper>
+        </div>
+        </div>
+    );
+};
+
+export default Banner;
