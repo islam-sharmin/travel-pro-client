@@ -22,7 +22,7 @@ const AddTouristSpot = () => {
         const userEmail = form.userEmail.value;
         const userName = form.userName.value;
         const photo = form.photo.value;
-
+        
 
         const newSpot = { spotName, countryName, location, shortDescription, averageCost, seasonality, travelTime, totalVisitorsPerYear,userEmail, userName, photo }
         console.log(newSpot);
