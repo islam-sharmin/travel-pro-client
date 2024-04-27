@@ -51,7 +51,7 @@ const AddTouristSpot = () => {
     }
 
     return (
-        <div className="bg-purple-100 rounded-2xl p-4 md:p-10 mb-4">
+        <div className="bg-purple-300 rounded-2xl p-4 md:p-10 mb-4">
             <h2 className="text-3xl text-center text-purple-700 font-extrabold mb-5">Add Tourist Spot</h2>
             <form onSubmit={handleAddTouristSpot}>
                 {/* form tourists_spot_name & country_Name row */}
