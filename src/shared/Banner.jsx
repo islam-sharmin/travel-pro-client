@@ -21,33 +21,33 @@ const Banner = () => {
                 autoplay={{ delay: 3000 }} 
             >
                 <SwiperSlide>
-                    <div className="relative w-full h-[40vh] md:h-[80vh] rounded-lg bg-no-repeat bg-cover" style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${torism1})`}}>
+                    <div className="relative w-full h-[60vh] md:h-[80vh] rounded-lg bg-no-repeat bg-cover" style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${torism1})`}}>
                         <div className="absolute inset-0 bg-cover bg-center flex flex-col justify-center items-center">
-                            <h1 className="text-white text-3xl font-bold mb-4">Discover Your Next Adventure</h1>
+                            <h1 className="text-white text-center text-3xl font-bold mb-4">Discover Your Next Adventure</h1>
                             <p className="text-white text-lg text-center">Unlock new experiences with our dynamic tourism website!</p>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="w-full h-[40vh] md:h-[80vh] rounded-lg bg-no-repeat bg-cover" style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${torism2})`}}>
+                    <div className="w-full h-[60vh] md:h-[80vh] rounded-lg bg-no-repeat bg-cover" style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${torism2})`}}>
                         <div className="absolute inset-0 bg-cover bg-center flex flex-col justify-center items-center">
-                            <h1 className="text-white text-3xl font-bold mb-4">Discover Your Next Adventure</h1>
+                            <h1 className="text-white text-center text-3xl font-bold mb-4">Discover Your Next Adventure</h1>
                             <p className="text-white text-lg text-center">Unlock new experiences with our dynamic tourism website!</p>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="relative w-full h-[40vh] md:h-[80vh] rounded-lg bg-no-repeat bg-cover" style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${torism3})`}}>
+                    <div className="relative w-full h-[60vh] md:h-[80vh] rounded-lg bg-no-repeat bg-cover" style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${torism3})`}}>
                         <div className="absolute inset-0 bg-cover bg-center flex flex-col justify-center items-center">
-                            <h1 className="text-white text-3xl font-bold mb-4">Discover Your Next Adventure</h1>
+                            <h1 className="text-white text-center text-3xl font-bold mb-4">Discover Your Next Adventure</h1>
                             <p className="text-white text-lg text-center">Unlock new experiences with our dynamic tourism website!</p>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="relative w-full h-[40vh] md:h-[80vh] rounded-lg bg-no-repeat bg-cover" style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${torism4})`}}>
+                    <div className="relative w-full h-[60vh] md:h-[80vh] rounded-lg bg-no-repeat bg-cover" style={{backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${torism4})`}}>
                         <div className="absolute inset-0 bg-cover bg-center flex flex-col justify-center items-center">
-                            <h1 className="text-white text-3xl font-bold mb-4">Discover Your Next Adventure</h1>
+                            <h1 className="text-white text-center text-3xl font-bold mb-4">Discover Your Next Adventure</h1>
                             <p className="text-white text-lg text-center">Unlock new experiences with our dynamic tourism website!</p>
                         </div>
                     </div>
