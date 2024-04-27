@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 
 const AddTouristSpot = () => {
@@ -27,25 +28,25 @@ const AddTouristSpot = () => {
         console.log(newSpot);
 
         // send data to the server
-        // fetch('https://coffee-store-server-dun-chi.vercel.app/coffee', {
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(newCoffee)
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         console.log(data);
-        //         if(data.insertedId){
-        //             Swal.fire({
-        //                 title: 'Success!',
-        //                 text: 'Coffee Added Successfully',
-        //                 icon: 'success',
-        //                 confirmButtonText: 'Cool'
-        //               })
-        //         }
-        //     })
+        fetch('http://localhost:5000/spots', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newSpot)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if(data.insertedId){
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Tourist Spot Added Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Awesome'
+                      })
+                }
+            })
     }
 
     return (
