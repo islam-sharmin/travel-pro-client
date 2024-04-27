@@ -47,6 +47,7 @@ const AddTouristSpot = () => {
                       })
                 }
             })
+        event.target.reset(form);
     }
 
     return (
@@ -127,7 +128,7 @@ const AddTouristSpot = () => {
                         <label className="label">
                             <span className="label-text text-purple-700 font-semibold">User Email</span>
                         </label>
-                        <input type="text" name="userEmail" value={user?.email} className="input input-bordered w-full" required />
+                        <input type="text" placeholder="User Email" name="userEmail" value={user?.email} className="input input-bordered w-full" required />
                     </div>
                     <div className="form-control md:w-1/2 md:ml-4">
                         <label className="label">
