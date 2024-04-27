@@ -35,8 +35,8 @@ const Navbar = () => {
 
     const navLinks = <>
         <li><NavLink to='/' className={({ isActive }) => isActive ? 'font-bold text-purple-600 p-1 border border-purple-600 rounded' : 'font-bold'}>Home</NavLink></li>
-        <li><NavLink to='/allTouristsSpot' className={({ isActive }) => isActive ? 'font-bold text-purple-600 p-1 border border-purple-600 rounded' : 'font-bold'}>All Tourists Spot</NavLink></li>
-        <li><NavLink to='/addTouristsSpot' className={({ isActive }) => isActive ? 'font-bold text-purple-600 p-1 border border-purple-600 rounded' : 'font-bold'}>Add Tourists Spot</NavLink></li>
+        <li><NavLink to='/allTouristSpot' className={({ isActive }) => isActive ? 'font-bold text-purple-600 p-1 border border-purple-600 rounded' : 'font-bold'}>All Tourists Spot</NavLink></li>
+        <li><NavLink to='/addTouristSpot' className={({ isActive }) => isActive ? 'font-bold text-purple-600 p-1 border border-purple-600 rounded' : 'font-bold'}>Add Tourists Spot</NavLink></li>
         <li><NavLink to='/myList' className={({ isActive }) => isActive ? 'font-bold text-purple-600 p-1 border border-purple-600 rounded' : 'font-bold'}>My List</NavLink></li>
         <li><NavLink to='/register' className={({ isActive }) => isActive ? 'font-bold text-purple-600 p-1 border border-purple-600 rounded' : 'font-bold'}>Register</NavLink></li>
     </>
