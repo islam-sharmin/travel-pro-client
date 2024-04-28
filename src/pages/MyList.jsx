@@ -70,14 +70,14 @@ const MyList = () => {
                     <tbody>
                         {/* row  */}
                         {
-                            items.map((item, index) => <tr key={item._id}>
+                            items?.map((item, index) => <tr key={item._id}>
                                 <th>{index + 1}</th>
                                 <td>{item.spotName}</td>
                                 <td>{item.countryName}</td>
                                 <td>{item.averageCost}</td>
                                 <td>{item.travelTime}</td>
                                 <td><div className="flex flex-col justify-center gap-4">
-                                    <Link to={`update/${item._id}`}>
+                                    <Link to={`/update/${item._id}`}>
                                     <button className="btn bg-purple-600 text-white w-3/5 ">UPDATE <GrUpdate className="w-4 h-4 text-white" /></button>
                                     </Link>
                                     <button onClick={() => handleDelete(item._id)} className="btn bg-red-600 text-white w-3/5">DELETE <MdDeleteForever className="w-5 h-5 text-white" /></button>
