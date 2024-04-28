@@ -1,11 +1,11 @@
-import { useContext } from "react";
-import { AuthContext } from "../providers/AuthProvider";
+// import { useContext } from "react";
+// import { AuthContext } from "../providers/AuthProvider";
 import Swal from "sweetalert2";
 
 
 const AddTouristSpot = () => {
 
-    const { user } = useContext(AuthContext);
+    // const { user } = useContext(AuthContext);
 
     const handleAddTouristSpot = event => {
         event.preventDefault();
@@ -19,16 +19,17 @@ const AddTouristSpot = () => {
         const seasonality = form.seasonality.value;
         const travelTime = form.travelTime.value;
         const totalVisitorsPerYear = form.totalVisitorsPerYear.value;
-        const userEmail = form.userEmail.value;
-        const userName = form.userName.value;
+        // const userEmail = form.userEmail.value;
+        // const userName = form.userName.value;
         const photo = form.photo.value;
         
 
-        const newSpot = { spotName, countryName, location, shortDescription, averageCost, seasonality, travelTime, totalVisitorsPerYear,userEmail, userName, photo }
+        const newSpot = { spotName, countryName, location, shortDescription, averageCost, seasonality, travelTime, totalVisitorsPerYear, photo }
         console.log(newSpot);
 
+        // 'http://localhost:5000/spots'
         // send data to the server
-        fetch('http://localhost:5000/spots', {
+        fetch('http://localhost:5000/countries', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -123,7 +124,7 @@ const AddTouristSpot = () => {
                     </div>
                 </div>
                 {/* form User Email & User Name row */}
-                <div className="md:flex mb-5">
+                {/* <div className="md:flex mb-5">
                     <div className="form-control md:w-1/2">
                         <label className="label">
                             <span className="label-text text-purple-700 font-semibold">User Email</span>
@@ -136,7 +137,7 @@ const AddTouristSpot = () => {
                         </label>
                         <input type="text" name="userName" value={user?.displayName} className="input input-bordered w-full" required />
                     </div>
-                </div>
+                </div> */}
                 {/* form photoURL row */}
                 <div className="mb-5">
                     <div className="form-control w-full">
