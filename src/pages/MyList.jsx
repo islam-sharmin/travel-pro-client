@@ -2,12 +2,14 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import { MdDeleteForever } from "react-icons/md";
 import { GrUpdate } from "react-icons/gr";
+import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 
 const MyList = () => {
 
     const { user } = useContext(AuthContext);
-    const [items, setItems] = useState([])
+    const [items, setItems] = useState([]);
 
     useEffect(() => {
         fetch(`http://localhost:5000/myList/${user?.email}`)
@@ -16,6 +18,37 @@ const MyList = () => {
                 setItems(data);
             })
     }, [user]);
+
+    const handleDelete = id => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/myList/${id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your Tourist Spot has been deleted.",
+                                icon: "success"
+                            });
+                            const remaining = items.filter(itm => itm._id !== id);
+                            setItems(remaining);
+                        }
+                    })
+            }
+        });
+    }
 
 
     return (
@@ -44,8 +77,10 @@ const MyList = () => {
                                 <td>{item.averageCost}</td>
                                 <td>{item.travelTime}</td>
                                 <td><div className="flex flex-col justify-center gap-4">
+                                    <Link to={`update/${item._id}`}>
                                     <button className="btn bg-purple-600 text-white w-3/5 ">UPDATE <GrUpdate className="w-4 h-4 text-white" /></button>
-                                    <button className="btn bg-red-600 text-white w-3/5">DELETE <MdDeleteForever className="w-5 h-5 text-white" /></button>
+                                    </Link>
+                                    <button onClick={() => handleDelete(item._id)} className="btn bg-red-600 text-white w-3/5">DELETE <MdDeleteForever className="w-5 h-5 text-white" /></button>
                                 </div></td>
                             </tr>)
                         }
