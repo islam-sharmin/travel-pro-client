@@ -7,7 +7,7 @@ const Footer = () => {
             <footer className="footer p-10 bg-purple-300 text-base-content">
                 <nav className="space-y-2">
                     <h6 className="text-2xl text-purple-700 font-bold">Travel Pro</h6>
-                    <p className="text-black">Discover your dream home and <br />culinary delights here!</p>
+                    <p className="text-black">Explore. Discover. Plan. Book. Travel. Enjoy. Share.</p>
                     <div className="flex gap-5 items-center">
                         <p className="text-2xl text-black"><FaFacebook /></p>
                         <p className="text-2xl text-black"><FaGithub /></p>

@@ -6,7 +6,6 @@ import torism2 from "../assets/torism2.jpg"
 import torism3 from "../assets/torism3.jpg"
 import torism4 from "../assets/torism4.jpg"
 import { Typewriter } from 'react-simple-typewriter'
-import { Slide } from "react-awesome-reveal";
 
 
 const Banner = () => {
@@ -38,9 +37,7 @@ const Banner = () => {
                                             delaySpeed={1000}
                                         />
                                     </span></h1>
-                                <Slide>
                                     <p className="text-white text-lg text-center">Unlock new experiences with our dynamic tourism website!</p>
-                                </Slide>
                             </div>
                         </div>
                     </SwiperSlide>
@@ -59,9 +56,7 @@ const Banner = () => {
                                             delaySpeed={1000}
                                         />
                                     </span></h1>
-                                <Slide>
                                     <p className="text-white text-lg text-center">Unlock new experiences with our dynamic tourism website!</p>
-                                </Slide>
                             </div>
                         </div>
                     </SwiperSlide>
@@ -80,9 +75,7 @@ const Banner = () => {
                                             delaySpeed={1000}
                                         />
                                     </span></h1>
-                                <Slide>
                                     <p className="text-white text-lg text-center">Unlock new experiences with our dynamic tourism website!</p>
-                                </Slide>
                             </div>
                         </div>
                     </SwiperSlide>
@@ -101,9 +94,7 @@ const Banner = () => {
                                             delaySpeed={1000}
                                         />
                                     </span></h1>
-                                <Slide>
                                     <p className="text-white text-lg text-center">Unlock new experiences with our dynamic tourism website!</p>
-                                </Slide>
                             </div>
                         </div>
                     </SwiperSlide>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Slide } from "react-awesome-reveal";
 
 
 const PopularTouristSpot = () => {
@@ -15,10 +16,12 @@ const PopularTouristSpot = () => {
 
     return (
         <div>
-            <div className="my-10 space-y-2">
+            <div className="my-14 space-y-2">
+                <Slide>
                 <h2 className="text-3xl font-bold text-center text-purple-700">Some Popular Tourist Spots</h2>
                 <p className="text-center w-[70%] mx-auto text-slate-600">
                     Embark on a journey to breathtaking landscapes, cultural wonders, and hidden gems with our tourism website, your passport to unforgettable travel experiences.</p>
+                </Slide>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {

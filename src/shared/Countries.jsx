@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
+import { Slide } from "react-awesome-reveal";
 
 
 const Countries = () => {
     return (
         <div>
-            <div className="text-center mt-12 mb-12">
+            <div className="text-center mt-14 mb-14">
+                <Slide>
                 <h2 className="text-3xl font-bold text-purple-700 mb-2">Countries</h2>
                 <p className="text-center w-[70%] mx-auto text-slate-600">Explore diverse cultures and stunning landscapes on our tourism websites countries section. Start your global journey today!</p>
+                </Slide>
             </div>
             <div className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 {/* Bangladesh */}
