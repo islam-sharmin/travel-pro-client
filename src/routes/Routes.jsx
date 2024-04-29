@@ -10,6 +10,13 @@ import ViewDetails from "../pages/ViewDetails";
 import MyList from "../pages/MyList";
 import PrivateRoute from "./PrivateRoute";
 import Update from "../pages/Update";
+import Bangladesh from "../pages/Bangladesh";
+import CountryViewDetails from "../pages/CountryViewDetails";
+import Thailand from "../pages/Thailand";
+import Indonesia from "../pages/Indonesia";
+import Malaysia from "../pages/Malaysia";
+import Vietnam from "../pages/Vietnam";
+import Cambodia from "../pages/Cambodia";
 
 
 const router = createBrowserRouter([
@@ -51,7 +58,36 @@ const router = createBrowserRouter([
                 path: '/update/:id',
                 element:<PrivateRoute><Update></Update></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/allTouristSpots/${params.id}`)
-            }
+            },
+            {
+                path: '/countryDetails/:id',
+                element: <PrivateRoute><CountryViewDetails></CountryViewDetails></PrivateRoute>,
+                loader: ({params}) => fetch(`http://localhost:5000/countries/${params.id}`)
+            },
+            {
+                path: '/bangladesh',
+                element: <PrivateRoute><Bangladesh></Bangladesh></PrivateRoute>
+            },
+            {
+                path: '/thailand',
+                element: <PrivateRoute><Thailand></Thailand></PrivateRoute>
+            },
+            {
+                path: '/indonesia',
+                element: <PrivateRoute><Indonesia></Indonesia></PrivateRoute>
+            },
+            {
+                path: '/malaysia',
+                element: <PrivateRoute><Malaysia></Malaysia></PrivateRoute>
+            },
+            {
+                path: '/vietnam',
+                element: <PrivateRoute><Vietnam></Vietnam></PrivateRoute>
+            },
+            {
+                path: '/cambodia',
+                element: <PrivateRoute><Cambodia></Cambodia></PrivateRoute>
+            },
         ]
     }
 ])

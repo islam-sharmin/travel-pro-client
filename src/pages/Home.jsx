@@ -1,4 +1,5 @@
 import Banner from "../shared/Banner";
+import Countries from "../shared/Countries";
 import PopularTouristSpot from "../shared/PopularTouristSpot";
 
 
@@ -7,6 +8,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <PopularTouristSpot></PopularTouristSpot>
+            <Countries></Countries>
         </div>
     );
 };
