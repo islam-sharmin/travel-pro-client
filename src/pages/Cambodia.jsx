@@ -7,7 +7,7 @@ const Cambodia = () => {
     const [spots, setSpots] = useState([]);
 
     useEffect( () => {
-        fetch('http://localhost:5000/cambodia')
+        fetch('https://travel-pro-server-two.vercel.app/cambodia')
         .then(res => res.json())
         .then(data => setSpots(data))
     }, []);

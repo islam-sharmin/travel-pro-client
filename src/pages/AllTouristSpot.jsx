@@ -10,7 +10,7 @@ const AllTouristSpot = () => {
     const {user} = useContext(AuthContext);
 
     useEffect(() => {
-        fetch('http://localhost:5000/allTouristSpots')
+        fetch('https://travel-pro-server-two.vercel.app/allTouristSpots')
             .then(res => res.json())
             .then(data => {
                 setSpots(data);
@@ -18,7 +18,7 @@ const AllTouristSpot = () => {
     }, [user]);
 
     const handleSort = () => {
-        fetch(`http://localhost:5000/allTouristSpotsSort?sort=averageCost`)
+        fetch(`https://travel-pro-server-two.vercel.app/allTouristSpotsSort?sort=averageCost`)
             .then(res => res.json())
             .then(data => {
                 setSpots(data);

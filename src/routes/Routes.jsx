@@ -48,7 +48,7 @@ const router = createBrowserRouter([
             {
                 path: '/viewDetails/:id',
                 element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/allTouristSpots/${params.id}`)
+                loader: ({params}) => fetch(`https://travel-pro-server-two.vercel.app/allTouristSpots/${params.id}`)
             },
             {
                 path: '/myList',
@@ -57,12 +57,12 @@ const router = createBrowserRouter([
             {
                 path: '/update/:id',
                 element:<PrivateRoute><Update></Update></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/allTouristSpots/${params.id}`)
+                loader: ({params}) => fetch(`https://travel-pro-server-two.vercel.app/allTouristSpots/${params.id}`)
             },
             {
                 path: '/countryDetails/:id',
                 element: <PrivateRoute><CountryViewDetails></CountryViewDetails></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/countries/${params.id}`)
+                loader: ({params}) => fetch(`https://travel-pro-server-two.vercel.app/countries/${params.id}`)
             },
             {
                 path: '/bangladesh',

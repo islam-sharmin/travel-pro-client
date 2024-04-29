@@ -12,7 +12,7 @@ const MyList = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myList/${user?.email}`)
+        fetch(`https://travel-pro-server-two.vercel.app/myList/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setItems(data);
@@ -30,7 +30,7 @@ const MyList = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/myList/${id}`, {
+                fetch(`https://travel-pro-server-two.vercel.app/myList/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

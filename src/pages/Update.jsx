@@ -25,7 +25,7 @@ const Update = () => {
         console.log(newSpot);
 
         // send data to the server
-        fetch(`http://localhost:5000/allTouristSpots/${spots._id}`, {
+        fetch(`https://travel-pro-server-two.vercel.app/allTouristSpots/${spots._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

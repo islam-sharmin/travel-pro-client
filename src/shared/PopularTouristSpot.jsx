@@ -8,7 +8,7 @@ const PopularTouristSpot = () => {
     const [spots, setSpots] = useState(null)
 
     useEffect(() => {
-        fetch('http://localhost:5000/allTouristSpots')
+        fetch('https://travel-pro-server-two.vercel.app/allTouristSpots')
             .then(res => res.json())
             .then(data => setSpots(data))
     }, []);
