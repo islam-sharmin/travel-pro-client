@@ -7,7 +7,6 @@ const CountryViewDetails = () => {
 
     return (
         <div>
-            <h2>Details of: {spotDetails._id}</h2>
             <div className="hero mt-8">
                 <div className="hero-content gap-5 flex-col lg:flex-row">
                     <img src={spotDetails.photo} className="rounded-lg shadow-xl bg-base-300 h-[80vh] w-full md:w-1/2" />
