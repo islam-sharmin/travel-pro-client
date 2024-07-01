@@ -63,7 +63,7 @@ const MyList = () => {
                             <th>Spot Name</th>
                             <th className="hidden md:block">Country Name</th>
                             <th>Average Cost</th>
-                            <th className="hidden md:block">Travel Time</th>
+                            <th>Travel Time</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -73,10 +73,10 @@ const MyList = () => {
                             items?.map((item, index) => <tr key={item._id}>
                                 <th>{index + 1}</th>
                                 <td>{item.spotName}</td>
-                                <td className="hidden md:block">{item.countryName}</td>
+                                <td className="hidden md:block mt-12">{item.countryName}</td>
                                 <td>{item.averageCost}</td>
-                                <td className="hidden md:block">{item.travelTime}</td>
-                                <td><div className="flex flex-col justify-center gap-4">
+                                <td>{item.travelTime}</td>
+                                <td><div className="flex flex-col justify-center gap-2">
                                     <Link to={`/update/${item._id}`}>
                                     <button className="btn bg-purple-600 text-white w-3/5 ">UPDATE <GrUpdate className="w-4 h-4 text-white" /></button>
                                     </Link>
